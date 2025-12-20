@@ -1,0 +1,21 @@
+name: Dev Branch & Path Trigger
+
+on:
+    push:
+        branches:
+            - dev
+        paths:
+            - "src/**"
+
+jobs:
+    run-on-dev-src-change:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Run when src changes on dev
+              run: |
+                  echo "Triggered by push to dev branch"
+                  echo "Files modified inside src/ directory"
