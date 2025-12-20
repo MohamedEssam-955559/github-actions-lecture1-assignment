@@ -22,5 +22,5 @@ jobs:
                   context: .
                   push: true
                   tags: |
-                      ${{ vars.DOCKER_USERNAME }}/my-app:latest
-                      ${{ vars.DOCKER_USERNAME }}/my-app:${{ github.sha }}
+                    docker.io/${{ vars.DOCKER_USERNAME }}/myapp:latest
+                    docker.io/${{ vars.DOCKER_USERNAME }}/myapp:${{ github.sha }}
